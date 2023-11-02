@@ -1,0 +1,19 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.MoviesFlix" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:statusBarColor">@color/statusBarColor</item>
+        <item name="colorPrimary">@color/PrimaryColor</item>
+        <item name="colorAccent">@color/ColorAccent</item>
+        <item name="colorPrimaryDark">@color/PrimaryDarkColor</item>
+    </style>
+
+    <style name="Theme.MoviesFlix" parent="Base.Theme.MoviesFlix" />
+
+    <style name="CustomSwitchStyle">
+        <item name="android:thumbTint">@color/white</item>
+        <item name="android:trackTint">@color/black</item>
+    </style>
+
+</resources>

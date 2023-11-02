@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#001C30"
+    tools:context=".Fragments.HomeFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/home_main_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:id="@+id/top_banner_rl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/hfrg_top_banner_imv"
+                        android:layout_width="match_parent"
+                        android:layout_height="400dp"
+                        android:foreground="@drawable/image_fade_design"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/poster12" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_margin="30dp">
+
+                        <TextView
+                            android:id="@+id/welcome_txt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Welcome"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="50sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/welcome_txt"
+                            android:text="Discover a vast collection of films, stay updated on the latest releases"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/home_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#30000000">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="5dp">
+
+                        <ImageView
+                            android:id="@+id/htb_logo_imv"
+                            android:layout_width="120dp"
+                            android:layout_height="50dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/mainlogo"
+                            android:scaleType="fitCenter"/>
+
+                        <ImageView
+                            android:id="@+id/htb_search_imv"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="15dp"
+                            android:layout_toStartOf="@id/htb_menu_imv"
+                            android:src="@drawable/baseline_search_24" />
+
+                        <ImageView
+                            android:id="@+id/htb_menu_imv"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="15dp"
+                            android:src="@drawable/baseline_menu_24" />
+                    </RelativeLayout>
+                </androidx.appcompat.widget.Toolbar>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/home_toolbar"
+                    android:layout_margin="8dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/c1"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="8dp"
+                        android:alpha=".5"
+                        android:backgroundTint="#1B1B1B"
+                        app:cardCornerRadius="5dp">
+
+                        <TextView
+                            android:id="@+id/featured_movies_filter_btn"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="8dp"
+                            android:text="Movies"
+                            android:gravity="center_vertical"
+                            android:textAlignment="center"
+                            android:textColor="#FFFFFF"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/c2"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:layout_toEndOf="@+id/c1"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="8dp"
+                        android:alpha=".5"
+                        android:backgroundTint="#1B1B1B"
+                        app:cardCornerRadius="5dp">
+
+                        <TextView
+                            android:id="@+id/featured_tvshow_filter_btn"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="TV Shows"
+                            android:gravity="center_vertical"
+                            android:textAlignment="center"
+                            android:textColor="#FFFFFF"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+                    </androidx.cardview.widget.CardView>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/top_banner_rl"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/third_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="Featured Movies"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            android:textStyle="normal" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/third_recv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/second_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="Popular"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            android:textStyle="normal" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/second_recv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp" />
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/featured_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:padding="5dp"
+                            android:text="Trending"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            android:textStyle="normal" />
+
+                    </RelativeLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/featured_item_recv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/first_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="Top Rated"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            android:textStyle="normal" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/child_recv"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/home_fragment_shimmer_view_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:visibility="visible"
+                app:shimmer_base_alpha="0.3"
+                app:shimmer_duration="800">
+
+                <LinearLayout
+                    android:id="@+id/simmer_view_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/toolbar_simmer_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:elevation="8dp"
+                            app:cardCornerRadius="15dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/first_simmer_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="400dp"
+                            android:layout_marginTop="8dp"
+                            android:elevation="8dp"
+                            app:cardCornerRadius="15dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/second_simmer_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="32dp"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:elevation="5dp"
+                            app:cardCornerRadius="5dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="#DDDDDD"
+                                android:textSize="20sp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="170dp"
+                            android:layout_marginTop="16dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="120dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="8dp"
+                                android:elevation="5dp"
+                                app:cardCornerRadius="5dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="#DDDDDD"
+                                    android:scaleType="centerCrop" />
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="120dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="8dp"
+                                android:elevation="5dp"
+                                app:cardCornerRadius="5dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="#DDDDDD"
+                                    android:scaleType="centerCrop" />
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="120dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="8dp"
+                                android:elevation="5dp"
+                                app:cardCornerRadius="5dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="#DDDDDD"
+                                    android:scaleType="centerCrop" />
+                            </androidx.cardview.widget.CardView>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/third_simmer_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="32dp"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:elevation="5dp"
+                            app:cardCornerRadius="5dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="#DDDDDD"
+                                android:textSize="20sp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="170dp"
+                            android:layout_marginTop="16dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="120dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="8dp"
+                                android:elevation="5dp"
+                                app:cardCornerRadius="5dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="#DDDDDD"
+                                    android:scaleType="centerCrop" />
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="120dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="8dp"
+                                android:elevation="5dp"
+                                app:cardCornerRadius="5dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="#DDDDDD"
+                                    android:scaleType="centerCrop" />
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="120dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="8dp"
+                                android:elevation="5dp"
+                                app:cardCornerRadius="5dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="#DDDDDD"
+                                    android:scaleType="centerCrop" />
+                            </androidx.cardview.widget.CardView>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/fouth_simmer_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="32dp"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:elevation="5dp"
+                            app:cardCornerRadius="5dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="#DDDDDD"
+                                android:textSize="20sp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="170dp"
+                            android:layout_marginTop="16dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="250dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="8dp"
+                                android:elevation="5dp"
+                                app:cardCornerRadius="10dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="#DDDDDD"
+                                    android:scaleType="centerCrop" />
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="250dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="8dp"
+                                android:elevation="5dp"
+                                app:cardCornerRadius="5dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="#DDDDDD"
+                                    android:scaleType="centerCrop" />
+                            </androidx.cardview.widget.CardView>
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/fifth_simmer_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="32dp"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:elevation="5dp"
+                            app:cardCornerRadius="5dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="#DDDDDD"
+                                android:textSize="20sp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="170dp"
+                            android:layout_marginTop="16dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="120dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="8dp"
+                                android:elevation="5dp"
+                                app:cardCornerRadius="5dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="#DDDDDD"
+                                    android:scaleType="centerCrop" />
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="120dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="8dp"
+                                android:elevation="5dp"
+                                app:cardCornerRadius="5dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="#DDDDDD"
+                                    android:scaleType="centerCrop" />
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="120dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginEnd="8dp"
+                                android:elevation="5dp"
+                                app:cardCornerRadius="5dp">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="#DDDDDD"
+                                    android:scaleType="centerCrop" />
+                            </androidx.cardview.widget.CardView>
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+</FrameLayout>

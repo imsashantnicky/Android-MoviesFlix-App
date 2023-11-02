@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#001C30"
+    android:padding="5dp"
+    android:layout_marginTop="8dp">
+    <LinearLayout
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/new_movies_month"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Month"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/new_movies_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-5dp"
+            android:text="30"
+            android:textColor="@color/white"
+            android:textSize="45sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            app:cardCornerRadius="15dp"
+            android:elevation="5dp"
+            app:cardBackgroundColor="#FF9800">
+            <ImageView
+                android:id="@+id/new_movies_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/poster24"
+                android:scaleType="centerCrop"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp">
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:src="@drawable/mainlogo"
+                android:scaleType="fitCenter"
+                android:layout_centerVertical="true"/>
+
+            <LinearLayout
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="10dp"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:src="@drawable/baseline_play_circle_24"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/new_movies_coming_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Coming on 18 October"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/new_movies_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tony Stark, a genius billionaire, is captured and forced to build a destructive weapon. Instead, he creates a powered suit of armor to escape."
+                android:textColor="@color/white"
+                android:textStyle="normal"
+                android:textSize="13sp"
+                android:layout_marginTop="5dp"/>
+
+            <TextView
+                android:id="@+id/new_movies_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Suspenseful, Thriller, 1980, US"
+                android:textStyle="normal"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:layout_marginTop="10dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

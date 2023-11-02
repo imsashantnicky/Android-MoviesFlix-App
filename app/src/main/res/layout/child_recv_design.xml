@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="120dp"
+        android:layout_height="170dp"
+        android:elevation="5dp"
+        app:cardCornerRadius="10dp"
+        android:background="@drawable/poster20">
+
+        <ImageView
+            android:id="@+id/child_recv_imv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/poster41" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginTop="-20dp"
+        app:cardCornerRadius="100dp"
+        android:layout_marginStart="5dp">
+
+        <ProgressBar
+            android:id="@+id/rating_progressbar"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:indeterminateOnly="false"
+            android:progressDrawable="@drawable/high_rating_progressbar"/>
+
+        <TextView
+            android:id="@+id/rating_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7.0"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_gravity="center"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/child_recv_title_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Movie Name Title"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/child_recv_subtitle_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="sub title"
+        android:textColor="#6C6C6C"
+        android:textSize="12sp"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/movie_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="movieid"/>
+
+
+</LinearLayout>
